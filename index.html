@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insomnia Cookies</title>
+  <link href="https://api.fontshare.com/v2/css?f=cal-sans@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Candal&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+
+</head>
+<body id="top">
+  <header>
+    <h1>Insomnia Cookies</h1>
+    <nav aria-label="Main Navigation">
+      <h2 class="sr-only">Main Navigation</h2>
+      <ul>
+        <li><a href="#intro">Intro</a></li>
+        <li><a href="#product">Product</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle">Light Mode</button>
+  </header>
+
+  <main>
+    <section id="intro" class="about">
+      <h2>About Insomnia Cookies</h2>
+      <p>Insomnia Cookies started in 2003 when founder Seth Berkowitz, craving warm, sweet treats late at night, created a business to satisfy those needs. It began in his dorm room and grew into a company that revolutionized late-night food delivery. Since then, they've opened stores, launched nationwide shipping, and added new items like vegan cookies and Dippers. Today, Insomnia Cookies continues to serve sweet treats to late-night fans with over 200 stores and a flagship CookieLab in Philadelphia.</p>
+      <img src="images/intro.jpg" alt="About Insomnia Cookies">
+    </section>
+        <section id="product" class="product">
+            <h2>Our Cookies</h2>
+          
+            <div class="product-controls">
+              <button data-product="chocolate-chunk">Chocolate Chunk</button>
+              <button data-product="deluxe-triple">Deluxe Triple Chunk</button>
+              <button data-product="double-chocolate">Double Chocolate Chunk</button>
+            </div>
+          
+            <div id="product-display">
+              <div id="chocolate-chunk" class="product-item">
+                <h3>Chocolate Chunk</h3>
+                <img src="images/ChocolateChunk.png" alt="Chocolate Chunk Cookie">
+                <p>A rich, buttery vanilla cookie amped up with loads of ooey-gooey milk chocolate chunks.</p>
+              </div>
+          
+              <div id="deluxe-triple" class="product-item hidden">
+                <h3>Deluxe Triple Chunk</h3>
+                <img src="images/DeluxeTriple.png" alt="Deluxe Triple Chunk">
+                <p>A super-sized, buttery cookie with a triple serving of ooey-gooey chocolate chunks.</p>
+              </div>
+          
+              <div id="double-chocolate" class="product-item hidden">
+                <h3>Double Chocolate Chunk</h3>
+                <img src="images/DoubleChocolate.png" alt="Double Chocolate Chunk">
+                <p>Our dark chocolate cookie is taken to its drool-worthy peak with chunks of smooth, melty milk chocolate.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section id="game-play" class="game-play">
+            <h2>Play & Win!</h2>
+            <p>We can't tour right now, but we miss our fans! Guess the number correctly, and you win a t-shirt from our store! <br> Enter a Number between 1 and 10 in the form. We will generate a random number. If your number matches, you win!</p>
+            <label for="userGuess">Enter a Number Between 1 and 10:</label><br>
+            <input type="number" id="userGuess" min="1" max="10" required><br><br>
+          
+            <button id="guessButton">Take a Guess!</button>
+          
+            <div id="gameResults" class="hidden">
+              <h3>Game Results</h3>
+              <p id="resultText"></p>
+              <p>Your Guess: <span id="userGuessDisplay"></span></p>
+              <p>Winning Number: <span id="winningNumberDisplay"></span></p>
+            </div>
+          </section>
+    
+    <form id="contact">
+        <h2>Contact Us</h2>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName">
+        <span class="error" id="nameError"></span>
+
+        <fieldset>
+        <legend>Preferred Contact Method:</legend>
+        <label><input type="radio" name="contactMethod" value="email" checked> Email</label>
+        <label><input type="radio" name="contactMethod" value="phone"> Phone</label>
+        <span class="error" id="methodError"></span>
+        </fieldset>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email">
+        <span class="error" id="emailError"></span>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" name="phone">
+        <span class="error" id="phoneError"></span>
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments"></textarea>
+        <span class="error" id="commentsError"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="result"></div>
+      
+  </main>
+
+  <footer>
+    <small>&copy; 2025 Insomnia Cookies. <br>This site is for educational purposes only.</small>
+  </footer>
+  
+</body>
+</html>
